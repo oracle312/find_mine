@@ -1,0 +1,12 @@
+C:\Users\ab1t3\Desktop\myGit\Chat\Mine_Test\Mine_Test\bin\Debug\Mine_Test.exe.config
+C:\Users\ab1t3\Desktop\myGit\Chat\Mine_Test\Mine_Test\bin\Debug\Mine_Test.exe
+C:\Users\ab1t3\Desktop\myGit\Chat\Mine_Test\Mine_Test\bin\Debug\Mine_Test.pdb
+C:\Users\ab1t3\Desktop\myGit\Chat\Mine_Test\Mine_Test\obj\Debug\Mine_Test.csproj.AssemblyReference.cache
+C:\Users\ab1t3\Desktop\myGit\Chat\Mine_Test\Mine_Test\obj\Debug\Mine_Test.csproj.SuggestedBindingRedirects.cache
+C:\Users\ab1t3\Desktop\myGit\Chat\Mine_Test\Mine_Test\obj\Debug\Mine_Test.Main.resources
+C:\Users\ab1t3\Desktop\myGit\Chat\Mine_Test\Mine_Test\obj\Debug\Mine_Test.Properties.Resources.resources
+C:\Users\ab1t3\Desktop\myGit\Chat\Mine_Test\Mine_Test\obj\Debug\Mine_Test.csproj.GenerateResource.cache
+C:\Users\ab1t3\Desktop\myGit\Chat\Mine_Test\Mine_Test\obj\Debug\Mine_Test.csproj.CoreCompileInputs.cache
+C:\Users\ab1t3\Desktop\myGit\Chat\Mine_Test\Mine_Test\obj\Debug\Mine_Test.exe
+C:\Users\ab1t3\Desktop\myGit\Chat\Mine_Test\Mine_Test\obj\Debug\Mine_Test.pdb
+C:\Users\ab1t3\Desktop\myGit\Chat\Mine_Test\Mine_Test\obj\Debug\Mine_Test.Overlay.resources
