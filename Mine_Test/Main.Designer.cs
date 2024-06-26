@@ -28,14 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.wallHack = new System.Windows.Forms.CheckBox();
+            this.lbl_catchProc = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_catchProc = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbl_time = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbl_base = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // wallHack
             // 
             this.wallHack.AutoSize = true;
             this.wallHack.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wallHack.Location = new System.Drawing.Point(12, 21);
+            this.wallHack.Location = new System.Drawing.Point(6, 20);
             this.wallHack.Name = "wallHack";
             this.wallHack.Size = new System.Drawing.Size(70, 17);
             this.wallHack.TabIndex = 0;
@@ -43,12 +54,94 @@
             this.wallHack.UseVisualStyleBackColor = true;
             this.wallHack.CheckedChanged += new System.EventHandler(this.wallHack_CheckedChanged_1);
             // 
+            // lbl_catchProc
+            // 
+            this.lbl_catchProc.AutoSize = true;
+            this.lbl_catchProc.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbl_catchProc.ForeColor = System.Drawing.Color.Red;
+            this.lbl_catchProc.Location = new System.Drawing.Point(9, 231);
+            this.lbl_catchProc.Name = "lbl_catchProc";
+            this.lbl_catchProc.Size = new System.Drawing.Size(189, 17);
+            this.lbl_catchProc.TabIndex = 1;
+            this.lbl_catchProc.Text = "타겟 프로세스를 열어주세요 :F";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.wallHack);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(202, 152);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            // 
+            // btn_catchProc
+            // 
+            this.btn_catchProc.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_catchProc.Location = new System.Drawing.Point(12, 199);
+            this.btn_catchProc.Name = "btn_catchProc";
+            this.btn_catchProc.Size = new System.Drawing.Size(202, 29);
+            this.btn_catchProc.TabIndex = 3;
+            this.btn_catchProc.Text = "OpenProcess";
+            this.btn_catchProc.UseVisualStyleBackColor = true;
+            this.btn_catchProc.Click += new System.EventHandler(this.btn_catchProc_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(12, 170);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(202, 23);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lbl_base);
+            this.groupBox2.Controls.Add(this.lbl_time);
+            this.groupBox2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox2.Location = new System.Drawing.Point(8, 64);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(188, 82);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Memory";
+            // 
+            // lbl_time
+            // 
+            this.lbl_time.AutoSize = true;
+            this.lbl_time.Location = new System.Drawing.Point(29, 19);
+            this.lbl_time.Name = "lbl_time";
+            this.lbl_time.Size = new System.Drawing.Size(39, 15);
+            this.lbl_time.TabIndex = 0;
+            this.lbl_time.Text = "label1";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lbl_base
+            // 
+            this.lbl_base.AutoSize = true;
+            this.lbl_base.Location = new System.Drawing.Point(25, 42);
+            this.lbl_base.Name = "lbl_base";
+            this.lbl_base.Size = new System.Drawing.Size(39, 15);
+            this.lbl_base.TabIndex = 1;
+            this.lbl_base.Text = "label1";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(196, 145);
-            this.Controls.Add(this.wallHack);
+            this.ClientSize = new System.Drawing.Size(224, 257);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btn_catchProc);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.lbl_catchProc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -56,6 +149,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -64,6 +161,14 @@
         #endregion
 
         private System.Windows.Forms.CheckBox wallHack;
+        private System.Windows.Forms.Label lbl_catchProc;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btn_catchProc;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lbl_time;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lbl_base;
     }
 }
 

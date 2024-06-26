@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace Mine_Test
 {
     public partial class Overlay : Form
@@ -43,17 +45,13 @@ namespace Mine_Test
         RECT rect;
         IntPtr handle;
         public const string winName = "지뢰 찾기";
-        const int PROCESS_WM_READ = 0x0010;
-        const int PROCESS_ALL_ACCESS = 0x1F0FFF;
 
-        ReadMemory rm = new ReadMemory();
-        Process proc;
+        
+        
+        Pointer ptr;
 
-        int wAddr = 0x01005334;
-        int hAddr = 0x01005338;
-        int mAddr = 0x01005361;
-        int width;
-        int height;
+        
+
         public Overlay()
         {
             InitializeComponent();
@@ -82,9 +80,26 @@ namespace Mine_Test
         private void Overlay_Paint(object sender, PaintEventArgs e)
         {
             g = e.Graphics;
-            
 
-             for (int i = 0; i < 9; i++)
+           /* int[,] map = new int[9, 9];
+            int val = 0;
+            int base_addr = ptr.pProc.MainModule.BaseAddress.ToInt32();
+            int mine_base = ptr.mem.ReadInt(base_addr);
+            ptr = new Pointer(mine_base);
+
+            for (int i =0; i < 9; i++)
+            {
+                for (int j= 9; j<9; j++)
+                {
+                    int main_addr = ptr.main_addr + j + i * 32;
+                    val = ptr.mem.ReadInt(main_addr);
+                    map[i, j] = val;
+                    Console.WriteLine(map[i, j] + " ");
+                }
+                Console.WriteLine();
+            }*/
+
+             /*for (int i = 0; i < 9; i++)
              {
                  for (int j = 0; j < 9; j++)
                  {
@@ -92,7 +107,7 @@ namespace Mine_Test
                      rect.Top = (i * 16) + 100;
                      g.DrawRectangle(pen, rect.Left, rect.Top, 15, 15);
                  }
-             }
+             }*/
 
         }
 
