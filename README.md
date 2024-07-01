@@ -48,10 +48,17 @@
 
 ### 🖥️ 결과물
 ---
-우선 격자에 맞게 그려주었다.
+우선 격자에 맞게 그려주었다.<br/>
 ![13](https://github.com/oracle312/find_mine/assets/72733953/abf1aaf3-f263-45d9-b3df-ee44a5fe768a)
 ![12](https://github.com/oracle312/find_mine/assets/72733953/798ca7f6-221e-4fce-af5b-31c5debbbbf5)
 ![9](https://github.com/oracle312/find_mine/assets/72733953/8a12e080-3565-41e1-a3ad-47646565741f)
 <br/>
 ![14](https://github.com/oracle312/find_mine/assets/72733953/a5cadc14-5042-4c41-a9c0-ece59345788a)
-<br/>
+<br/><br/><br/> 지뢰가 존재하는 위치에만 표시해주었다.<br/>
+![18](https://github.com/oracle312/find_mine/assets/72733953/1ffd2f16-4dbf-45f1-846d-bed407ede12b)
+![19](https://github.com/oracle312/find_mine/assets/72733953/4b7d17a6-1bef-4fbf-bf3d-57e9d5dd70b8)
+<br/><br/><br/> 지뢰의 수를 변경하여도 잘 인식한다.<br/>
+![20](https://github.com/oracle312/find_mine/assets/72733953/9c8b2692-b27c-4f96-bba5-9d36d99403ba)
+![21](https://github.com/oracle312/find_mine/assets/72733953/84c91655-806b-45a9-9aa5-9493a4412da7)
+<br/><br/><br/> 작동 모습.<br/>
+![22](https://github.com/oracle312/find_mine/assets/72733953/eb5f587f-227f-46c7-a672-226bcf48373c)
