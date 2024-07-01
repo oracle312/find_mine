@@ -48,8 +48,10 @@
 
 ### 🖥️ 결과물
 ---
+우선 격자에 맞게 그려주었다.
 ![13](https://github.com/oracle312/find_mine/assets/72733953/abf1aaf3-f263-45d9-b3df-ee44a5fe768a)
 ![12](https://github.com/oracle312/find_mine/assets/72733953/798ca7f6-221e-4fce-af5b-31c5debbbbf5)
 ![9](https://github.com/oracle312/find_mine/assets/72733953/8a12e080-3565-41e1-a3ad-47646565741f)
 <br/>
 ![14](https://github.com/oracle312/find_mine/assets/72733953/a5cadc14-5042-4c41-a9c0-ece59345788a)
+<br/>
