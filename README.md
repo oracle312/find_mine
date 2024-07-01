@@ -34,6 +34,10 @@
 <br/><br/> 위의 사진을 캡쳐 할 때만해도 크기대로 들어가는 줄 알았으나, 배열에 계속 이상한 값이 들어가길래 메모리를 새로 보고 나서 10을 기점으로 시작, 종료점을 나눈다는 걸 알게됐다. <br/>
 <br/><br/>
 
+![26](https://github.com/oracle312/find_mine/assets/72733953/d18f65d6-dd08-41b0-9459-65bce9d3d43f)
+![27](https://github.com/oracle312/find_mine/assets/72733953/3f98cc71-052c-4152-b011-6fb005e01863)
+![25](https://github.com/oracle312/find_mine/assets/72733953/c51b5c05-4736-47cb-b782-50009a0744e6)
+
 <br/><br/>
 배열에 잘 들어가는 모습을 볼 수 있다. 이걸 토대로 그려주기만 하면 된다.
 <br/><br/><br/>
