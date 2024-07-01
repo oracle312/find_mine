@@ -74,10 +74,11 @@ C/C++ 을 고집하다 C#으로 이번에 진행하며 적응되지 않아 애�
   💡 해결법 : 게임을 시작할 때 지뢰를 임의로 배치하기 위해 rand 함수를 사용하는데 호출될 때 그려주거나, 실시간으로 그려주면..(실시간이 현명하다..)<br/>
 + ~~⚠️ 문제점 : 현재 9x9 게임에서만 동작한다, [9, 9] 정적배열에 메모리를 저장하기 때문. 그렇기에 NxN 게임에서는 동작하지 않는다.~~ <br/>
   ~~💡 해결법 : 높이와 너비가 존재하는 메모리를 읽어와 동적배열로 만들어주면 된다.~~ <br/>
-  해결 하였다. <br/>
+  <br/>해결 하였다. <br/>
   ![22](https://github.com/oracle312/find_mine/assets/72733953/ef3ffc94-3e70-4a98-b67a-70e844b345c1)
 ![23](https://github.com/oracle312/find_mine/assets/72733953/ee673931-23e1-493c-8d03-e7e5c280be8d)
 ![24](https://github.com/oracle312/find_mine/assets/72733953/1388b90e-728a-4f2e-b8cc-d051c22ab01f)
+<br/>크기를 변경해도 잘 동작한다. <br/>
 ![25](https://github.com/oracle312/find_mine/assets/72733953/494e4bef-4f31-4434-b9f4-f1e284d7da87)
   
 
