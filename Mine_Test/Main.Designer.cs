@@ -33,12 +33,12 @@
             this.lbl_catchProc = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbl_arAddr = new System.Windows.Forms.Label();
             this.lbl_base = new System.Windows.Forms.Label();
             this.lbl_time = new System.Windows.Forms.Label();
             this.btn_catchProc = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lbl_arAddr = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +89,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Memory";
             // 
+            // lbl_arAddr
+            // 
+            this.lbl_arAddr.AutoSize = true;
+            this.lbl_arAddr.Location = new System.Drawing.Point(6, 49);
+            this.lbl_arAddr.Name = "lbl_arAddr";
+            this.lbl_arAddr.Size = new System.Drawing.Size(0, 15);
+            this.lbl_arAddr.TabIndex = 2;
+            // 
             // lbl_base
             // 
             this.lbl_base.AutoSize = true;
@@ -133,19 +141,11 @@
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lbl_arAddr
-            // 
-            this.lbl_arAddr.AutoSize = true;
-            this.lbl_arAddr.Location = new System.Drawing.Point(6, 49);
-            this.lbl_arAddr.Name = "lbl_arAddr";
-            this.lbl_arAddr.Size = new System.Drawing.Size(0, 15);
-            this.lbl_arAddr.TabIndex = 2;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 257);
+            this.ClientSize = new System.Drawing.Size(224, 253);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btn_catchProc);
             this.Controls.Add(this.groupBox1);

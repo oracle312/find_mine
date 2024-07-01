@@ -40,16 +40,22 @@ namespace Mine_Test
         }
 
         Graphics g;
-        Pen pen = new Pen(Color.Red);
+        Pen pen = new Pen(Color.Red, 4);
         
         RECT rect;
         IntPtr handle;
         public const string winName = "지뢰 찾기";
 
         ReadMemory rm = new ReadMemory();
-        Pointer ptr;
-        
-        
+        public string[,] str = new string[9, 9];
+
+        private string[,] _data;
+        public string[,] Data
+        {
+            get { return _data; }
+            set { _data = value; }
+        }
+
 
         public Overlay()
         {
@@ -76,73 +82,36 @@ namespace Mine_Test
             tmr_setting.Enabled = true;
         }
 
-        private void Overlay_Paint(object sender, PaintEventArgs e)
+        public void arrayData(string[,] data)
         {
-            g = e.Graphics;
-            ptr = new Pointer(0x01000000);
-            //ptr.SetMineData(rm);
-            /* int[,] map = new int[9, 9];
-             int val = 0;
-             int base_addr = ptr.pProc.MainModule.BaseAddress.ToInt32();
-             int mine_base = ptr.mem.ReadInt(base_addr);
-             ptr = new Pointer(mine_base);
-
-             for (int i =0; i < 9; i++)
-             {
-                 for (int j= 9; j<9; j++)
-                 {
-                     int main_addr = ptr.main_addr + j + i * 32;
-                     val = ptr.mem.ReadInt(main_addr);
-                     map[i, j] = val;
-                     Console.WriteLine(map[i, j] + " ");
-                 }
-                 Console.WriteLine();
-             }*/
-
             /*for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    rect.Left = (j * 16) + 13;
-                    rect.Top = (i * 16) + 100;
-                    g.DrawRectangle(pen, rect.Left, rect.Top, 15, 15);
+                    
+                    md.map[i, j] = data[i, j];
                 }
             }*/
 
-            string[,] data = new string[9, 9];
-            string specifier = "X";
-            string str;
-            int main_addr = 0x01005361;
-            int mAddr;
-            int val;
+            str = data.Clone() as string[,];
+        }
+
+        private void Overlay_Paint(object sender, PaintEventArgs e)
+        {
+            g = e.Graphics;
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    //map_addr = map_addr + j;
-                    //addr = main_addr;
-                    //addr += j;
-                    mAddr = main_addr + j + i * 32;
-                    val = rm.ReadInt(mAddr);
-                    str = val.ToString(specifier);
-                    data[i, j] = str.Substring(str.Length - 2);
-
-                }
-
-            }
-
-            /*for (int i = 0; i < 9; i++)
-            {
-                for (int j = 0; j < 9; j++)
-                {
-                    if (ptr.data[i, j] == "8F")
+                    if (Data[i, j] == "8F")
                     {
-                        rect.Left = (j * 16) + 13;
+                        rect.Left = (j * 16) + 15;
                         rect.Top = (i * 16) + 100;
                         g.DrawRectangle(pen, rect.Left, rect.Top, 15, 15);
                     }
+                        
                 }
-            }*/
+            }
 
         }
 

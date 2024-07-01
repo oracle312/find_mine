@@ -34,7 +34,7 @@
             // 
             // tmr_setting
             // 
-            this.tmr_setting.Interval = 10;
+            this.tmr_setting.Interval = 1;
             this.tmr_setting.Tick += new System.EventHandler(this.tmr_setting_Tick);
             // 
             // Overlay

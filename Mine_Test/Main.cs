@@ -24,7 +24,8 @@ namespace Mine_Test
         bool mapHack = false;
 
         Pointer mainMine;
-        
+        int base_m = 0x00005361;
+        int main_addr;
 
         public Main()
         {
@@ -37,6 +38,27 @@ namespace Mine_Test
         {
             if (wallHack.Checked == true)
             {
+                string specifier = "X";
+                string str;
+                string[,] data = new string[9, 9];
+                int addr, val;
+                
+                for (int i = 0; i < 9; i++)
+                {
+                    for (int j = 0; j < 9; j++)
+                    {
+                        //map_addr = map_addr + j;
+                        //addr = main_addr;
+                        //addr += j;
+                        addr = main_addr + j + i * 32;
+                        val = rm.ReadInt(addr);
+                        str = val.ToString(specifier);
+                        data[i, j] = str.Substring(str.Length - 2);
+
+                    }
+
+                }
+                overlay.Data = data;
                 overlay.Show();
             }
             else
@@ -80,28 +102,11 @@ namespace Mine_Test
                     int base_addr = proc.MainModule.BaseAddress.ToInt32();
                     int mine_base = rm.ReadInt(base_addr);
                     mainMine = new Pointer(base_addr);
-                    mainMine.pProc = proc;
+
+                    main_addr = base_addr + base_m;
 
 
 
-                    int[,] map = new int[9, 9];
-                    int val = 0;
-                    int bdr = proc.MainModule.BaseAddress.ToInt32() + 0x00005361;
-                    int mdr = rm.ReadInt(base_addr);
-                    
-
-                    for (int i = 0; i < 9; i++)
-                    {
-                        for (int j = 9; j < 9; j++)
-                        {
-                            int m_addr = bdr + i;
-                            val = rm.ReadInt(m_addr);
-
-                            map[i, j] = val;
-                            Console.WriteLine(map[i, j] + " ");
-                        }
-                        Console.WriteLine();
-                    }
 
 
 

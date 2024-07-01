@@ -32,6 +32,7 @@ namespace Mine_Test
 
         public ReadMemory mem = new ReadMemory();
         public Process pProc;
+        public Overlay overlay = new Overlay();
 
         /*public Pointer(int mine_addr)
         {
@@ -47,31 +48,36 @@ namespace Mine_Test
             time = 0;
             val = 0;
             data = new string[9, 9];
-            
+
         }
 
         public void SetMineData(ReadMemory rm)
         {
             time = rm.ReadInt(base_addr + base_t);
             mem = rm;
-            /*string specifier = "X";
-            string str;
-            int addr;
-            for (int i = 0; i < 9; i++)
-            {
-                for (int j = 0; j < 9; j++)
-                {
-                    //map_addr = map_addr + j;
-                    //addr = main_addr;
-                    //addr += j;
-                    addr = main_addr + j + i * 32;
-                    val = rm.ReadInt(addr);
-                    str = val.ToString(specifier);
-                    data[i, j] = str.Substring(str.Length - 2);
+            /* string specifier = "X";
+             string str;
+             int addr;
+             for (int i = 0; i < 9; i++)
+             {
+                 for (int j = 0; j < 9; j++)
+                 {
+                     //map_addr = map_addr + j;
+                     //addr = main_addr;
+                     //addr += j;
+                     addr = main_addr + j + i * 32;
+                     val = rm.ReadInt(addr);
+                     str = val.ToString(specifier);
+                     data[i, j] = str.Substring(str.Length - 2);
 
-                }
-                
-            }*/
+                 }
+
+             }
+
+             overlay.arrayData(data);
+
+             overlay.Data = data;
+         }*/
         }
     }
 }
