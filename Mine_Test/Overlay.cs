@@ -55,6 +55,18 @@ namespace Mine_Test
             get { return _data; }
             set { _data = value; }
         }
+        private int h;
+        public int H
+        {
+            get { return h; }
+            set { h = value; }
+        }
+        private int w;
+        public int W
+        {
+            get { return w; }
+            set { w = value; }
+        }
 
 
         public Overlay()
@@ -99,9 +111,9 @@ namespace Mine_Test
         private void Overlay_Paint(object sender, PaintEventArgs e)
         {
             g = e.Graphics;
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < h; i++)
             {
-                for (int j = 0; j < 9; j++)
+                for (int j = 0; j < w; j++)
                 {
                     if (Data[i, j] == "8F")
                     {

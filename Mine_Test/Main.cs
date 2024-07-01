@@ -25,7 +25,13 @@ namespace Mine_Test
 
         Pointer mainMine;
         int base_m = 0x00005361;
+        int base_w = 0x00005334;
+        int base_h = 0x00005338;
         int main_addr;
+        int h_addr;
+        int w_addr;
+        int h;
+        int w;
 
         public Main()
         {
@@ -38,14 +44,15 @@ namespace Mine_Test
         {
             if (wallHack.Checked == true)
             {
+                //timer2.Enabled = true;
                 string specifier = "X";
                 string str;
-                string[,] data = new string[9, 9];
+                string[,] data = new string[h,w];
                 int addr, val;
                 
-                for (int i = 0; i < 9; i++)
+                for (int i = 0; i < h; i++)
                 {
-                    for (int j = 0; j < 9; j++)
+                    for (int j = 0; j < w; j++)
                     {
                         //map_addr = map_addr + j;
                         //addr = main_addr;
@@ -59,6 +66,8 @@ namespace Mine_Test
 
                 }
                 overlay.Data = data;
+                overlay.H = h;
+                overlay.W = w;
                 overlay.Show();
             }
             else
@@ -104,9 +113,9 @@ namespace Mine_Test
                     mainMine = new Pointer(base_addr);
 
                     main_addr = base_addr + base_m;
-
-
-
+                    w_addr = base_addr + base_w;
+                    h_addr = base_addr + base_h;
+                    timer2.Enabled = true;
 
 
 
@@ -151,9 +160,18 @@ namespace Mine_Test
                     lbl_base.Text = "베이스 : " + mainMine.base_addr.ToString(specifier);
                     lbl_time.Text = "시간 : " + mainMine.time;
                     lbl_arAddr.Text = "지뢰주소 : " + mainMine.main_addr.ToString(specifier);
+                    
                 }
                 catch { }
             }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            w = rm.ReadInt(w_addr);
+            h = rm.ReadInt(h_addr);
+            lbl_h.Text = "높이 : " + w;
+            lbl_w.Text = "너비 : " + h;
         }
     }
 }

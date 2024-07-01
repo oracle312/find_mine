@@ -39,6 +39,9 @@
             this.btn_catchProc = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.lbl_h = new System.Windows.Forms.Label();
+            this.lbl_w = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -78,13 +81,15 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lbl_w);
+            this.groupBox2.Controls.Add(this.lbl_h);
             this.groupBox2.Controls.Add(this.lbl_arAddr);
             this.groupBox2.Controls.Add(this.lbl_base);
             this.groupBox2.Controls.Add(this.lbl_time);
             this.groupBox2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox2.Location = new System.Drawing.Point(8, 64);
+            this.groupBox2.Location = new System.Drawing.Point(8, 43);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(188, 82);
+            this.groupBox2.Size = new System.Drawing.Size(188, 103);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Memory";
@@ -141,6 +146,26 @@
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // lbl_h
+            // 
+            this.lbl_h.AutoSize = true;
+            this.lbl_h.Location = new System.Drawing.Point(6, 64);
+            this.lbl_h.Name = "lbl_h";
+            this.lbl_h.Size = new System.Drawing.Size(0, 15);
+            this.lbl_h.TabIndex = 3;
+            // 
+            // lbl_w
+            // 
+            this.lbl_w.AutoSize = true;
+            this.lbl_w.Location = new System.Drawing.Point(6, 79);
+            this.lbl_w.Name = "lbl_w";
+            this.lbl_w.Size = new System.Drawing.Size(0, 15);
+            this.lbl_w.TabIndex = 4;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -178,6 +203,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lbl_base;
         private System.Windows.Forms.Label lbl_arAddr;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label lbl_w;
+        private System.Windows.Forms.Label lbl_h;
     }
 }
 
